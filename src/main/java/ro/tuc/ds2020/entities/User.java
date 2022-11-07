@@ -38,12 +38,12 @@ public class User implements Serializable {
     private Integer age;
 
     @Column(name = "isadmin", nullable = false)
-    private Boolean isAdmin;
+    private Integer isAdmin;
 
     public User() {
     }
 
-    public User(UUID id, String name, String email, String password, String address, Integer age, Boolean isAdmin) {
+    public User(UUID id, String name, String email, String password, String address, Integer age, Integer isAdmin) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -101,12 +101,12 @@ public class User implements Serializable {
         this.age = age;
     }
 
-    public Boolean getAdmin() {
+    public Integer getIsAdmin() {
         return isAdmin;
     }
 
-    public void setAdmin(Boolean admin) {
-        isAdmin = admin;
+    public void setIsAdmin(Integer isAdmin) {
+        this.isAdmin = isAdmin;
     }
 }
 
